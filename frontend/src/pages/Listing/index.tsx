@@ -39,9 +39,13 @@ function Listing(){
 	};
 
 
+	const hanglePageChange = (newPageNumber: number) => {
+		setPageNumber(newPageNumber);
+	}
+
 	return(
 		<>
-		<Pagination />
+		<Pagination page={page} onChange={hanglePageChange} />
 
 		<div className="container">
 			<div className="row">
